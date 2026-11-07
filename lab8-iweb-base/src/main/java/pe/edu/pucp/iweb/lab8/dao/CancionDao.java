@@ -1,10 +1,15 @@
 package pe.edu.pucp.iweb.lab8.dao;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import pe.edu.pucp.iweb.lab8.beans.Cancion;
 
-public class CancionDao { // TODO: heredar de BaseDao
+public class CancionDao extends BaseDao { // TODO: heredar de BaseDao
 
     /**
      * Ejercicio 2: todas las canciones (con el nombre de su género, JOIN),
@@ -12,6 +17,13 @@ public class CancionDao { // TODO: heredar de BaseDao
      */
     public ArrayList<Cancion> listar() {
         // TODO
+        try (Connection conn=this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("select * from canciones ");) {
+        }
+        catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
         return new ArrayList<>();
     }
 
@@ -20,6 +32,13 @@ public class CancionDao { // TODO: heredar de BaseDao
      */
     public Cancion buscarPorId(int idCancion) {
         // TODO
+        try (Connection conn=this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("select * from canciones ");) {
+        }
+        catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
         return null;
     }
 
@@ -28,6 +47,13 @@ public class CancionDao { // TODO: heredar de BaseDao
      */
     public void crear(Cancion cancion) {
         // TODO
+        try (Connection conn=this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("select * from canciones ");) {
+        }
+        catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
     }
 
     /**
@@ -35,6 +61,13 @@ public class CancionDao { // TODO: heredar de BaseDao
      */
     public void actualizar(Cancion cancion) {
         // TODO
+        try (Connection conn=this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("select * from canciones ");) {
+        }
+        catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
     }
 
     /**
@@ -42,5 +75,12 @@ public class CancionDao { // TODO: heredar de BaseDao
      */
     public void eliminar(int idCancion) {
         // TODO
+        try (Connection conn=this.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery("select * from canciones ");) {
+        }
+        catch (SQLException throwables){
+            throwables.printStackTrace();
+        }
     }
 }
